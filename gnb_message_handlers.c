@@ -321,7 +321,7 @@ UeListM* build_ue_list_message(){
         }
         else if (strcmp(connected_ue_list[i].prop_1, "64-QAM") == 0){
             ue_info_list[i]->meas_type_1 = randomBER64();
-            ue_info_list[i]->prop_1 = RAN_MCS_TYPE__SIXYFOUR_QAM;
+            ue_info_list[i]->prop_1 = RAN_MCS_TYPE__SIXTYFOUR_QAM;
         }
         else{
 
