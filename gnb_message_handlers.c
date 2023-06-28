@@ -313,19 +313,21 @@ UeListM* build_ue_list_message(){
         //ue_info_list[i]->has_meas_type_3 = 1;
         //ue_info_list[i]->meas_type_3 = rand();
 
+        ue_info_list[i]->has_prop_1 = 1;
+
         if (strcmp(connected_ue_list[i].prop_1, "16-QAM") == 0){
             ue_info_list[i]->meas_type_1 = randomBER16();
+            ue_info_list[i]->prop_1 = RAN_MCS_TYPE__SIXTEEN_QAM;
         }
         else if (strcmp(connected_ue_list[i].prop_1, "64-QAM") == 0){
             ue_info_list[i]->meas_type_1 = randomBER64();
+            ue_info_list[i]->prop_1 = RAN_MCS_TYPE__SIXYFOUR_QAM;
         }
         else{
 
         }
 
         // properties
-        ue_info_list[i]->has_prop_1 = 1;
-        ue_info_list[i]->prop_1 = connected_ue_list[i].prop_1;
         if(connected_ue_list[i].prop_2 > -1){
         ue_info_list[i]->has_prop_2 = 1;
         ue_info_list[i]->prop_2 = connected_ue_list[i].prop_2;
