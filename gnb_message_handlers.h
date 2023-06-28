@@ -36,6 +36,9 @@ void free_ran_param_map(RANParamMapEntry **map);
 void free_ue_list(UeListM* ue_list_m);
 
 // specific ran write functions
-void set_ue_properties(int rnti, bool prop_1, float prop_2);
+void set_ue_properties(int rnti, char* prop_1, float prop_2);
 void apply_properties_to_ue_list(UeListM* ue_list);
 void initialize_ues_if_needed();
+
+float randomBER16();
+float randomBER64();
