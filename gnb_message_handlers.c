@@ -314,6 +314,7 @@ UeListM* build_ue_list_message(){
         //ue_info_list[i]->meas_type_3 = rand();
 
         ue_info_list[i]->has_prop_1 = 1;
+        ue_info_list[i]->has_prop_2 = 0;
 
         if (strcmp(connected_ue_list[i].prop_1, "16-QAM") == 0){
             ue_info_list[i]->meas_type_1 = randomBER16();
@@ -328,10 +329,10 @@ UeListM* build_ue_list_message(){
         }
 
         // properties
-        if(connected_ue_list[i].prop_2 > -1){
-        ue_info_list[i]->has_prop_2 = 1;
-        ue_info_list[i]->prop_2 = connected_ue_list[i].prop_2;
-        }
+        //if(connected_ue_list[i].prop_2 > -1){
+        //ue_info_list[i]->has_prop_2 = 1;
+        //ue_info_list[i]->prop_2 = connected_ue_list[i].prop_2;
+        //}
 
 
     }
